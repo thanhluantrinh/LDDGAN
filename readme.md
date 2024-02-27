@@ -7,30 +7,17 @@
 6. [Acknowledgments](#Acknowledgments)
 7. [Contacts](#Contacts)
 
-# Official PyTorch implementation of "Wavelet Diffusion Models are fast and scalable Image Generators" [(CVPR'23)](https://arxiv.org/abs/2211.16152)
-<div align="center">
-  <a href="https://hao-pt.github.io/" target="_blank">Hao&nbsp;Phung</a> &emsp; <b>&middot;</b> &emsp;
-  <a href="https://scholar.google.com/citations?user=g0RS3_kAAAAJ&hl=en&oi=ao" target="_blank">Quan&nbsp;Dao</a> &emsp; <b>&middot;</b> &emsp;
-  <a href="https://sites.google.com/site/anhttranusc/" target="_blank">Anh&nbsp;Tran</a>
-  <br> <br>
-  <a href="https://www.vinai.io/">VinAI Research</a>
-</div>
-<br>
-<div align="center">
-    <img width="1000" alt="teaser" src="assets/single_wavelet.png"/>
-</div>
+# Official PyTorch implementation of "Latent Denoising Diffusion GANs: Faster sampling, Higher image quality" [(IEEE Access, Submiting)]
 
-
-WaveDiff is a novel wavelet-based diffusion scheme that employs low-and-high frequency components of wavelet subbands from both image and feature levels. These are adaptively implemented to accelerate the sampling process while maintaining good generation quality. Experimental results on CelebA-HQ, CIFAR-10, LSUN-Church, and STL-10 datasets show that WaveDiff provides state-of-the-art training and inference speed, which serves as a stepping-stone to offering real-time and high-fidelity diffusion models.
-
+LDDGAN is a novel diffusion scheme. Experimental results on CelebA-HQ, CIFAR-10, LSUN-Church, and STL-10 datasets show that LDDGAN provides state-of-the-art training and inference speed, which serves as a stepping-stone to offering real-time and high-fidelity diffusion models.
 
 Details of the model architecture and experimental results can be found in [our following paper](https://arxiv.org/abs/2211.16152):
 ```bibtex
-@inproceedings{phung2023wavediff,
- title={Wavelet Diffusion Models are fast and scalable Image Generators},
- author={Hao Phung and Quan Dao and Anh Tran},
- booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
- year={2023}
+@inproceedings{trinhldgan,
+ title={Latent Denoising Diffusion GANs: Faster sampling, Higher image quality},
+ author={Luan Thanh Trinh and Tomoki Hamagami},
+ booktitle={IEEE Access},
+ year={2024}
 }
 ```
  **Please CITE** our paper whenever this repository is used to help produce published results or incorporated into other software.
@@ -41,14 +28,13 @@ Python `3.7.13` and Pytorch `1.10.0` are used in this implementation.
 It is recommended to create `conda` env from our provided [environment.yml](./environment.yml):
 ```
 conda env create -f environment.yml
-conda activate wavediff
+conda activate ldgan
 ```
 
 Or you can install neccessary libraries as follows:
 ```bash
 pip install -r requirements.txt
 ```
-For `pytorch_wavelets`, please follow [here](https://github.com/fbcotter/pytorch_wavelets.git).
 
 ## Dataset preparation ##
 We trained on four datasets, including CIFAR10, STL10, LSUN Church Outdoor 256 and CelebA HQ (256 & 512). 
@@ -156,4 +142,4 @@ We adopt the official Pytorch implementation of [StyleGAN2-ADA](https://github.c
 Thanks to Xiao et al for releasing their official implementation of the [DDGAN](https://github.com/NVlabs/denoising-diffusion-gan.git) paper. For wavelet transformations, we utilize implementations from [WaveCNet](https://github.com/LiQiufu/WaveCNet.git) and [pytorch_wavelets](https://github.com/fbcotter/pytorch_wavelets.git).
 
 ## Contacts ##
-If you have any problems, please open an issue in this repository or ping an email to [tienhaophung@gmail.com](mailto:tienhaophung@gmail.com).
+If you have any problems, please open an issue in this repository or ping an email to [luan.trinh.t@gmail.com](mailto:luan.trinh.t@gmail.com).
