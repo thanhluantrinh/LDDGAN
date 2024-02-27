@@ -7,11 +7,11 @@
 6. [Acknowledgments](#Acknowledgments)
 7. [Contacts](#Contacts)
 
-# Official PyTorch implementation of "Latent Denoising Diffusion GANs: Faster sampling, Higher image quality" [(IEEE Access, Submiting)]
+# Official PyTorch implementation of "Latent Denoising Diffusion GANs: Faster sampling, Higher image quality" (IEEE Access, Submiting)
 
 LDDGAN is a novel diffusion scheme. Experimental results on CelebA-HQ, CIFAR-10, LSUN-Church, and STL-10 datasets show that LDDGAN provides state-of-the-art training and inference speed, which serves as a stepping-stone to offering real-time and high-fidelity diffusion models.
 
-Details of the model architecture and experimental results can be found in [our following paper](https://arxiv.org/abs/2211.16152):
+Details of the model architecture and experimental results can be found in IEEE Access paper (will be updated soon).
 ```bibtex
 @inproceedings{trinhldgan,
  title={Latent Denoising Diffusion GANs: Faster sampling, Higher image quality},
@@ -85,48 +85,48 @@ Model performance and pretrained checkpoints are provided as below:
     <td>4.01</td>
     <td>0.55</td>
     <td>0.08</td>
-    <td><a href="https://www.dropbox.com/sh/d1h1b9y0hjptnju/AABCdqJWnTq45uK2SRr6S_qGa?dl=0">netG_1300.pth</a></td>
+    <td><a href="https://www.dropbox.com/sh/d1h1b9y0hjptnju/AABCdqJWnTq45uK2SRr6S_qGa?dl=0">Waiting</a></td>
   </tr>
   <tr>
     <td>STL-10</td>
     <td>12.93</td>
     <td>0.41</td>
     <td>0.38</td>
-    <td><a href="https://www.dropbox.com/sh/wo72rvmfyzam8hx/AADzfJMnFTp61KpFGeErd5Dta?dl=0">netG_600.pth</a></td>
+    <td><a href="https://www.dropbox.com/sh/wo72rvmfyzam8hx/AADzfJMnFTp61KpFGeErd5Dta?dl=0">Waiting</a></td>
   </tr>
   <tr>
     <td>CelebA-HQ (256 x 256) </td>
     <td>5.94</td>
     <td>0.37</td>
     <td>0.79</td>
-    <td><a href="https://www.dropbox.com/sh/x32f74anuvglyat/AAAcrrRy5MySj39ZELd23q5Oa?dl=0">netG_475.pth</a></td>
+    <td><a href="https://www.dropbox.com/sh/x32f74anuvglyat/AAAcrrRy5MySj39ZELd23q5Oa?dl=0">Waiting</a></td>
   </tr>
   <tr>
     <td>CelebA-HQ (512 x 512) </td>
     <td>6.40</td>
     <td>0.35</td>
     <td>0.59</td>
-    <td><a href="https://www.dropbox.com/sh/r1ysz9u1kxla4qo/AAC6WjygEn31BhoNy4UfeRvca?dl=0">netG_350.pth</a></td>
+    <td><a href="https://www.dropbox.com/sh/r1ysz9u1kxla4qo/AAC6WjygEn31BhoNy4UfeRvca?dl=0">Waiting</a></td>
   </tr>
   <tr>
     <td>LSUN Church</td>
     <td>5.06</td>
     <td>0.40</td>
     <td>1.54</td>
-    <td><a href="https://www.dropbox.com/sh/nr44t8pwnf5xyxd/AACn0CJ-xa4ctr4oD5hrGhSqa?dl=0">netG_400.pth</a></td>
+    <td><a href="https://www.dropbox.com/sh/nr44t8pwnf5xyxd/AACn0CJ-xa4ctr4oD5hrGhSqa?dl=0">Waiting</a></td>
   </tr>
   <tr>
     <td>CelebA-HQ (1024 x 1024) </td>
     <td>5.98</td>
     <td>0.39</td>
     <td>0.59</td>
-    <td><a href="https://www.dropbox.com/sh/18p59gjw8dh5cto/AAB8USY8gkw-0muAG2YYe_Uka?dl=0">netG_350.pth</a></td>
+    <td><a href="https://www.dropbox.com/sh/18p59gjw8dh5cto/AAB8USY8gkw-0muAG2YYe_Uka?dl=0">Waiting</a></td>
   </tr>
 </table>
 
-Inference time is computed over 300 trials on a single NVIDIA A100 GPU for a batch size of 100, except for the one of high-resolution CelebA-HQ (512 & 1024) is computed for a batch of 25 samples.
+Inference time is computed over 300 trials on a single NVIDIA A5000 GPU for a batch size of 100, except for the one of high-resolution CelebA-HQ (512 & 1024) is computed for a batch of 25 samples.
 
-Downloaded pre-trained models should be put in `saved_info/wdd_gan/<DATASET>/<EXP>` directory where `<DATASET>` is defined in [How to run](#how-to-run) section and `<EXP>` corresponds to the folder name of pre-trained checkpoints.
+Downloaded pre-trained models should be put in `saved_info/ld_gan/<DATASET>/<EXP>` directory where `<DATASET>` is defined in [How to run](#how-to-run) section and `<EXP>` corresponds to the folder name of pre-trained checkpoints.
 
 ## Evaluation ##
 ### Inference ###
