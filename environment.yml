@@ -1,4 +1,4 @@
-name: luan2
+name: ldgan
 channels:
   - defaults
 dependencies:
@@ -101,4 +101,4 @@ dependencies:
     - wheel==0.38.4
     - yarl==1.9.2
 
-prefix: /home/luan2/miniconda3/envs/luan3
+prefix: ./envs/ldgan
