@@ -1,0 +1,47 @@
+model:
+  base_learning_rate: 4.5e-06
+  target: ldm.models.autoencoder.AutoencoderKL
+  params:
+    monitor: val/rec_loss
+    embed_dim: 4
+    lossconfig:
+      target: ldm.modules.losses.LPIPSWithDiscriminator
+      params:
+        disc_start: 50001
+        kl_weight: 1.0e-06
+        disc_weight: 0.5
+        disc_num_layers: 3
+    ddconfig:
+      double_z: true
+      z_channels: 4
+      resolution: 32
+      in_channels: 3
+      out_ch: 3
+      ch: 128
+      ch_mult:
+      - 1
+      - 2
+      num_res_blocks: 2
+      attn_resolutions:
+      - 16
+      dropout: 0.2
+      tanh_out: true
+data:
+  target: main.DataModuleFromConfig
+  params:
+    batch_size: 32
+    wrap: true
+    num_workers: 10
+    train:
+      target: ldm.data.custom_2.PersonalizeTrain0
+      params:
+        csv_path_train: ./data/train.txt
+        size: 32
+        degradation: pil_nearest
+        flip_p: 0.5
+    validation:
+      target: ldm.data.custom_2.PersonalizeVal0
+      params:
+        csv_path_val: ./data/test.txt
+        size: 32
+        degradation: pil_nearest
