@@ -7,7 +7,7 @@
 6. [Acknowledgments](#Acknowledgments)
 7. [Contacts](#Contacts)
 
-# Official PyTorch implementation of "Latent Denoising Diffusion GANs: Faster sampling, Higher image quality" (IEEE Access, Submitting)
+# Official PyTorch implementation of "Latent Denoising Diffusion GANs: Faster sampling, Higher image quality" ([IEEE Access](https://ieeexplore.ieee.org/document/10540088))
 
 LDDGAN is a novel diffusion scheme. Experimental results on CelebA-HQ, CIFAR-10, LSUN-Church, and STL-10 datasets show that LDDGAN provides state-of-the-art training and inference speed, which serves as a stepping-stone to offering real-time and high-fidelity diffusion models.
 
