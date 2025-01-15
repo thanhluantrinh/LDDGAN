@@ -36,7 +36,7 @@ Or you can install neccessary libraries as follows:
 pip install -r requirements.txt
 ```
 ## Autoencoder ##
-Download using links about and put them in `autoencoder/weight`
+Download using links in [here](https://github.com/thanhluantrinh/LDDGAN?tab=readme-ov-file#results)  and put them in `autoencoder/weight`
 ## Dataset preparation ##
 We trained on four datasets, including CIFAR10, LSUN Church Outdoor 256 and CelebA HQ 256. 
 
